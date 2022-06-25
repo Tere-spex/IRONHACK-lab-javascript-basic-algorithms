@@ -42,6 +42,7 @@ console.log(hacker2.split("").reverse().join(""));
   }else{
     console.log('What?! You both have the same name?')
   }
+  
 //BONUS1
 //Generate 3 paragraphs. Store the text in a variable type of string.
 const paragraf = 'Lorem et ipsum dolor sit, amet consectetur adipisicing elit. Nulla sapiente et quisquam dolorum cumque deleniti doloribus saepe et voluptatibus quia rerum quas.';
@@ -56,12 +57,27 @@ console.log(et.length);
 
 //BONUS2
 //"Was it a car or a cat I saw?" and "No 'x' in Nixon". COMO ELEMINAR OTROS CARACTERES???
-const phraseToCheck = "step on no pets";
-if (phraseToCheck === phraseToCheck.split("").reverse().join("")) {
+
+
+const phraseToCheck = "A man, a plan, a canal, Panama!";
+const finalPhrase = phraseToCheck.replace( /[^a-zA-Z0-9]/g, '' ).toLowerCase();
+
+if (finalPhrase === finalPhrase.split("").reverse().join("")) {
     console.log("The phrase is a palindrome!");
 }else{
     console.log("The phrase is not a palindrome!");
 }
 
+//ASSESSMENT
+const calcSumOfMultiples = number => {
+  let sum = 0;
   
-
+  for (let i = 1; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
+  }
+  
+  console.log(sum);
+};
+calcSumOfMultiples (10)
